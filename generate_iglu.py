@@ -89,7 +89,6 @@ def build_ref_pred_pair(ref_dict, pred_dict):
 
 
 def create_dotaloader(data_path, split):
-        # model_path="/datadrive/model/utterances_and_block_region_counters/20210718/utterances_and_block_region_counters_trainer-1626589670355/1626589670356"
     model_path = './saved_model/1626589670356'
     config_params = load_saved_config(model_path)
     gold_config_path = os.path.join(data_path, 'gold-configurations')

@@ -199,8 +199,9 @@ this is the script to train a prediction model, `utterances_and_block_region_cou
     python -u trainer.py utterances_and_block_region_counters /home/iglu/minecraft-architect/your/config/path/best_model.config
     
 
-In this script, you need to change the config path based on your own code structure. `utterances_and_block_region_counters` is the model name. After the training is done, models will be saved to path `model_path` + `a unique folder created during training`. The training log will give you all the relevant information.
+In this script, you need to change the config path based on your own code structure. After you download the dataset, you should replace the relevant fields (e.g., `model_path `, `saved_dataset_dir`, `data_dir `) with your own data path. `utterances_and_block_region_counters` is the model name. After the training is done, models will be saved to path `model_path` + `a unique folder created during training`. The training log will give you all the relevant information.
 
+**Note:** During training stage, you can feed args to the main function of trainer.py with two different ways: 1. you predefine a config file (`parser.add_argument('hyperparameter_file', type=str, help='file of hyperparameter options to train models for')`) including all the hyperparams you want to test; 2. if you do not want to use a predefined config file, you can set the values through parser. If you have used both the config file and parser to set your hyperparams, the values in the config file will overwrite the values in parser. For example, if you don’t want to hardcode the value of `--model_path` in the config file, you should remove this field from the config file and feed your desired path using `python trainer.py --model_path /your/own/path`. For the final submission, all hyperparams should be loaded from a config file or be hardcoded in your code. 
 ### Testing
 
 If you want to get predictions on a specific set, you can run
@@ -212,7 +213,7 @@ To test if your model is ready to submit, you can run:
 
     python -u generate_iglu.py
     
-In this example submission, we already placed a trained model in the directory `./saved_models`. 
+In this example submission, we already placed a trained model in the directory `./saved_models` together with the corresponding config file `saved_model/1626589670356/config.txt`. Don't forget to change the datapath in the main function of `generate_iglu.py`. For your own submissions, you should load all relevant hyper-params from a config file or hardcode them in the code. 
 
 ### About the submission
 
