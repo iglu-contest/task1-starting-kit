@@ -28,10 +28,10 @@ class CwCDataset(Dataset):
 	def __init__(
 		self, model, split, lower=False, add_builder_utterances=False, compute_diff=True, compute_perspective=True,
 		augment_dataset=False, augmentation_factor=0, exactly_k=False, strict=False,
-		data_dir="../data/logs/", gold_configs_dir="../data/gold-configurations/", save_dest_dir="/datadrive/saved_data/mc-architect/data/saved_cwc_datasets", saved_dataset_dir="/datadrive/saved_data/mc-architect/data/saved_cwc_datasets/lower-no_diff/", vocab_dir="../vocabulary/",
+		data_dir="../data/logs/", gold_configs_dir="../data/gold-configurations/", save_dest_dir=None, saved_dataset_dir=None, vocab_dir="../vocabulary/",
 		encoder_vocab=None, decoder_vocab=None, dump_dataset=True, load_dataset=False, transform=None, sample_filters = [],
-		add_augmented_data=False, augmented_data_fraction=0.0, aug_data_dir="/datadrive/saved_data/mc-architect/data/augmented-no-spatial/logs/", aug_gold_configs_dir="/datadrive/saved_data/mc-architect/data/augmented-no-spatial/gold-configurations/",
-		image_dir=''
+		add_augmented_data=False, augmented_data_fraction=0.0, aug_data_dir=None, aug_gold_configs_dir=None,
+		image_dir=None
 	):
 		"""
 		Instantiates a dataset
@@ -1499,7 +1499,7 @@ if __name__ == '__main__':
 
 	dataset = CwCDataset(
 		model=args.model, split=args.split, lower=args.lower, add_builder_utterances=args.add_builder_utterances, compute_diff=not args.ignore_diff, compute_perspective=not args.ignore_perspective,
-		encoder_vocab=encoder_vocab, decoder_vocab=decoder_vocab, dump_dataset=args.dump_dataset, load_dataset=args.load_dataset,
+		encoder_vocab=encoder_vocab, decoder_vocab=decoder_vocab, dump_dataset=args.dump_dataset, load_dataset=args.load_dataset, save_dest_dir=args.saved_dataset_dir,
 		saved_dataset_dir=args.saved_dataset_dir, transform=None, sample_filters = [], add_augmented_data=args.add_augmented_data, augmented_data_fraction=args.augmented_data_fraction
 	)
 

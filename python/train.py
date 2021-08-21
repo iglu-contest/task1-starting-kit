@@ -97,7 +97,7 @@ def main(args):
 	train_dataset = CwCDataset(
 		model=args.model, split="train", lower=lower, add_builder_utterances=args.add_builder_utterances, compute_diff=not args.ignore_diff,
 		augment_dataset=args.augment_dataset, augmentation_factor=args.augmentation_factor, exactly_k=args.exactly_k, strict=args.strict,
-		data_dir=args.data_dir, gold_configs_dir=args.gold_configs_dir, saved_dataset_dir=args.saved_dataset_dir, vocab_dir=args.vocab_dir,
+		data_dir=args.data_dir, gold_configs_dir=args.gold_configs_dir, save_dest_dir=args.saved_dataset_dir, saved_dataset_dir=args.saved_dataset_dir, vocab_dir=args.vocab_dir,
 		encoder_vocab=encoder_vocab, decoder_vocab=decoder_vocab, load_dataset=args.load_dataset, transform=None, augmented_data_fraction=args.augmented_data_fraction
 	)
 
@@ -107,7 +107,7 @@ def main(args):
 	dev_dataset = CwCDataset(
 		model=args.model, split="val", lower=lower, add_builder_utterances=args.add_builder_utterances, compute_diff=not args.ignore_diff,
 		augment_dataset=args.augment_dataset, augmentation_factor=args.augmentation_factor, exactly_k=args.exactly_k, strict=args.strict,
-		data_dir=args.data_dir, gold_configs_dir=args.gold_configs_dir, saved_dataset_dir=args.saved_dataset_dir, vocab_dir=args.vocab_dir,
+		data_dir=args.data_dir, gold_configs_dir=args.gold_configs_dir, save_dest_dir=args.saved_dataset_dir, saved_dataset_dir=args.saved_dataset_dir, vocab_dir=args.vocab_dir,
 		encoder_vocab=encoder_vocab, decoder_vocab=decoder_vocab, load_dataset = args.load_dataset, transform=None
 	)
 
