@@ -88,7 +88,7 @@ def build_ref_pred_pair(ref_dict, pred_dict):
 ####
 
 
-def create_dotaloader(data_path, split):
+def create_dataloader(data_path, split):
     model_path = './saved_model/1626589670356'
     config_params = load_saved_config(model_path)
     gold_config_path = os.path.join(data_path, 'gold-configurations')
@@ -225,7 +225,7 @@ def main():
     split = 'test'
     model = Model()
 
-    test_dataset = create_dotaloader(data_path, split)
+    test_dataset = create_dataloader(data_path, split)
 
     output_path = os.path.join('.', split+'.txt')
     model.generate(test_dataset, output_path)
