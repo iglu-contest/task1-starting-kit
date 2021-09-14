@@ -162,7 +162,7 @@ Files with \* are essential in the submitted code. Others are optional. In file 
 An example submission
 ============
 
-#### In the following sections, we will show how to convert baseline models from paper [Collaborative Dialogue in Minecraft](http://juliahmr.cs.illinois.edu/Minecraft/ACL2019.html) to a submission of IGLU task-1. 
+#### In the following sections, we will show how to convert baseline models from paper [Collaborative Dialogue in Minecraft](http://juliahmr.cs.illinois.edu/Minecraft/ACL2019.html) to a submission of IGLU task-1. You can download the baseline submission [here](https://drive.google.com/file/d/19DVFkeIPeGzE4d0yN1Pxz-gtFbEs6idH/view?usp=sharing). 
 
 Environment setup
 -----------------
