@@ -5,11 +5,13 @@ Data
 
 This dataset is from the ACL 2019 paper [Collaborative Dialogue in Minecraft](http://juliahmr.cs.illinois.edu/Minecraft/ACL2019.html). The Minecraft Dialogue Corpus (without screenshots) is stored in `data/logs`. The target structures are in `gold-configurations`. `logs/splits.json` defines the train-test-val split by defining subsets of target structures. You can download the corpus without screenshots [here](https://drive.google.com/file/d/1p5_SbFywFBHiKDx2M8xfhlimg6Yu_0IP/view?usp=sharing), the corpus with screenshots [here](https://drive.google.com/file/d/1fUIiQydVYEe-IQZqNNVTtenTGljNOrah/view?usp=sharing).
 
-### IGLU dataset (coming soon)
+### IGLU dataset
 
 This dataset is an extension of the original [Minecraft Dialogue Corpus](http://juliahmr.cs.illinois.edu/Minecraft/ACL2019.html). We have extended the original dataset by adding new structures and corresponding dialogues. We merged the original Minecraft Dialogue Corpus with our new dataset and resplit them to `train`, `val`, and `test` sets. It is guaranteed that the structures and dialogues in the `test` set are not included in the original Minecraft Dialogue Corpus. The `test` set is unseen to all the participants during the competition.
 
-#### \* Teams do not need to adjust their own dataloader while the new IGLU dataset is released. We will make sure UIUC data and IGLU data have the same data structure (more details below) and data format.
+##### \* Teams do not need to adjust their own dataloader while the new IGLU dataset is released. We will make sure UIUC data and IGLU data have the same data structure (more details below) and data format. 
+#### To download the latest IGLU data, you can run `python data_download.py`, or download it using Azure Explorer ([container url](https://igludatacollection.blob.core.windows.net/iglu-data-task-1?sp=rl&st=2021-10-26T00:20:33Z&se=2021-12-31T09:20:33Z&spr=https&sv=2020-08-04&sr=c&sig=lBNi7Qgl7KWCSY%2FW0Loua3tdjKjnaDCOvJxn39sPT1Q%3D)). We suggest participants mix UIUC data with IGLU data for training because they share similar formats and tasks. We will keep updating IGLU collections.
+
 
 ####
 
